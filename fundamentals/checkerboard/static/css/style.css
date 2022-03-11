@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color:blue;
+    background-color: aqua;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px ;
+    width: 100px ;
+}
+}
+.black{
+    background-color: black;
+
+}
+.red{
+    background-color: red;
+}
