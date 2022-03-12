@@ -6,8 +6,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Instead of returning a string, 
-    # we'll return the result of the render_template method, passing in the name of our HTML file
     return render_template("index.html")  
 
 # import statements, maybe some other routes
