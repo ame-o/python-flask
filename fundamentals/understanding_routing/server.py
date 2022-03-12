@@ -20,19 +20,14 @@ def sayname(name):
     return 'hello, ' + name
 
 
+@app.route('/repeat/<int:num>/<string:word>')
+def repeat_word(num, word):
+    output = ''
 
-@app.route('/35/<int:hello>')
-def tell(hello):
-    return 'hello ' * hello
+    for i in range(0,num):
+        output += f"<p>{word}</p>"
 
-@app.route('/80/<int:bye>')
-def tell(bye):
-    return 'bye ' * bye
-
-@app.route('/99/<int:dogs>')
-def tell(dogs):
-    return 'dogs' ' * dogs
-
+    return output
 
 
 if name=="main":   
