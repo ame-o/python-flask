@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Default</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Counter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .container{
+            display: block;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-
-        <h1>Index Page</h1>
-        <h3>Create a User</h3>
-        <form action='/users' method='post'>
-            
-            <label for='name'>Name:</label>
-            <input type='text' name='name'>
-            
-            <label for='email'>Email:</label>
-            <input type='text' name='email'>
-            
-Age            <input type='number' name='age'>
-
-            <input type='submit' value='create user'>
-        </form>
-
-
-
-
+        <h1>Counter</h1>
+        <div class="buttons">
+            <form action='/a' method='post'>
+            <h3><span name="add">{{count}}</span> visit(s)</h3>
+            <button class="button is-success" onclick ="counter()" name ="count">Click</button>
+            </form>
+            <form action="/destroy_session" method ='post'>
+            <button class="button is-danger" onclick ="clear()" name="reset">Reset</button>
+            </form>
+        </div>
     </div>
 </body>
 
