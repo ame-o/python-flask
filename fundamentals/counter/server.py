@@ -26,7 +26,7 @@ def counter():
     # session['session_count'] += 1
     return redirect("/")
 #========================================
-#Session Reset
+#Session Reset no need for form
 #========================================
     
 @app.route('/destroy_session', methods=['POST'])
