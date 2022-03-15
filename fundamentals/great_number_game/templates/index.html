@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>THE GREAT NUMBER GAME</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      .block:not(:last-child) {
+      margin-bottom: 1.5rem;
+}
+    </style>
   </head>
   <body>
   <section class="section">
@@ -23,7 +28,15 @@
         <button type="submit">Submit</button>
       </form>
       </div>
-    </div>
-  </section>
+      {% if comparison == "correct" %}
+      <div class="block bd-notification is-success">
+        <strong>Correct!!!</strong>.
+      </div>
+      {% else %}
+    <div class="block bd-notification is-danger">
+        Your guess is <strong>{{comparison}}</strong>!! 
+        </div>
+        {% endif %}
+    <a class="button is-danger"  href="/reset">Reset</a>
   </body>
 </html>
