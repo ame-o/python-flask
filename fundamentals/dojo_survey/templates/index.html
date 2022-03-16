@@ -7,10 +7,27 @@
     <title>Dojo Survey</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
-        .title{color:aquamarine}
-        .flex{ display: flex;flex-direction: column;justify-content: center;}
-        .block{display:block;padding: 5px;margin: 5px;}
-        .container{color: white;background-color: rgb(27, 22, 22);padding: 50px;}
+        .title {
+            color: aquamarine
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .block {
+            display: block;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .container {
+            color: white;
+            background-color: rgb(27, 22, 22);
+            padding: 50px;
+        }
     </style>
 </head>
 
@@ -19,7 +36,7 @@
 
 
 
-    <form action="/process">
+    <form action="/process" method="post">
         <section class="section flex">
             <div class="container flex">
                 <h1 class="title">Dojo Survey</h1>
@@ -36,7 +53,7 @@
                 </div>
                 <div class="select is-primary block">
                     <label>FAVE LANGUAGE:</label>
-                    <select name="fave Language">
+                    <select name="fave language">
                         <option>Favorite Language</option>
                         <option>JavaScript</option>
                         <option>Python</option>
@@ -44,9 +61,9 @@
                     </select>
                 </div>
                 <label>COMMENTS:</label>
-                <textarea class="textarea is-primary is-focused block" placeholder="WRITE SOMETHING HERE" name="comments"></textarea>
+                <textarea class="textarea is-primary is-focused block" placeholder="WRITE SOMETHING HERE"
+                    name="comments"></textarea>
                 <button type="submit" class="button is-primary is-focused">SUBMIT</button>
-
             </div>
     </form>
     </section>
